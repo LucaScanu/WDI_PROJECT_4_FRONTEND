@@ -18,7 +18,6 @@ function CurrentUserService(TokenService, $rootScope, User) {
         console.log(err);
       });
       self.removeUser = () => {
-        console.log('remove user');
         self.currentUser = null;
         TokenService.removeToken();
         $rootScope.$broadcast('loggedOut');

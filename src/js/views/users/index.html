@@ -1,0 +1,7 @@
+<div class="container">
+  <ul class="row">
+    <li class="tile col-xs-12 col-sm-6 col-md-4 col-lg-4 col-xl-4" ng-repeat="user in users.users track by $index">
+      <img ui-sref="usersShow({ id: event._id })" src="{{ user.image }}">
+    </li>
+  </ul>
+</div>
