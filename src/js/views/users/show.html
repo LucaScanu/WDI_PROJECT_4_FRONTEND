@@ -1,0 +1,82 @@
+<div class="row top">
+  <div class="col s12 m8 offset-m2">
+    <div class="row">
+      <div class="col s4">
+        <div class="card">
+          <div class="card-image">
+            <img ng-if="usersShow.user.profilePicture" src="{{usersShow.user.profilePicture}}">
+          </div>
+        </div>
+      </div>
+      <div class="col s8">
+        <div class="card profile">
+          <div class="card-content">
+            <h5>{{usersShow.user.firstName}} {{usersShow.user.lastName}}</h5>
+            <ul>
+              <li>GitHub: {{usersShow.user.github}}</li>
+              <li>LinkedIn: {{usersShow.user.linkedIn}}</li>
+              <li>Personal: {{usersShow.user.personalWebsite}} </li>
+              <li>email: {{usersShow.user.email}}</li>
+            </ul>
+            <a class="btn-floating btn-large halfway-fab waves-effect waves-light red"
+
+            ng-if="usersShow.currentUser._id === usersShow.user._id"
+
+             ui-sref="usersEdit({id: usersShow.user._id})"><i class="large material-icons">mode_edit</i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="card">
+        <ul class="collapsible" data-collapsible="accordion">
+          <li>
+            <div class="collapsible-header">
+              <span class="new badge" data-badge-caption="Projects">
+                {{usersShow.user.myProjects.length}}
+              </span>
+              Projects I Own
+            </div>
+            <div class="collapsible-body">
+              <ul class="collection">
+                <a class="collection-item" ng-if="usersShow.user.myProjects.length === 0">
+                  None </a>
+                <a class="collection-item" ng-if="usersShow.user.myProjects.length !== 0" ng-repeat="project in usersShow.user.myProjects track by $index" ui-sref="projectsShow({id: project._id})"> {{ project.name }} </a>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <div class="collapsible-header">
+              <span class="new badge" data-badge-caption="Projects">
+                {{usersShow.user.projects.length}}
+              </span>
+              Projects I'm In
+            </div>
+            <div class="collapsible-body">
+              <ul class="collection">
+                <a class="collection-item" ng-if="usersShow.user.projects.length === 0">
+                  None </a>
+                <a class="collection-item" ng-if="usersShow.user.projects.length !== 0" ng-repeat="project in usersShow.user.projects track by $index" ui-sref="projectsShow({id: project._id})"> {{ project.name }} </a>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <div class="collapsible-header">
+              <span class="new badge" data-badge-caption="Projects">
+                {{usersShow.user.myProjects.length}}
+              </span>
+              Pending Project Applications
+            </div>
+            <div class="collapsible-body">
+              <ul class="collection">
+                <a class="collection-item" ng-if="usersShow.user.pendingProjects.length === 0">
+                  None </a>
+                <a class="collection-item" ng-if="usersShow.user.pendingProjects.length !== 0" ng-repeat="project in usersShow.user.pendingProjects track by $index" ui-sref="projectsShow({id: project._id})"> {{ project.name }} </a>
+              </ul>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,41 @@
+<div class="row top">
+  <div class="col s12 m8 offset-m2">
+    <form class="col s12" ng-submit="usersEdit.usersUpdate()">
+      <div class="row">
+        <div class="row">
+          <div class="input-field col s12 m6">
+            <input id="first_name" type="text" class="validate active" placeholder="{{ usersEdit.user.firstName }}" ng-model="usersEdit.user.firstName">
+            <label for="first_name">First Name</label>
+          </div>
+          <div class="input-field col s12 m6">
+            <input id="last_name" type="text" class="validate active" placeholder="{{ usersEdit.user.lastName }}" ng-model="usersEdit.user.lastName">
+            <label for="last_name">Last Name</label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-field col s12 m6">
+            <input id="github" type="text" class="validate active" placeholder="{{ usersEdit.user.github }}" ng-model="usersEdit.user.github">
+            <label for="github">Github</label>
+          </div>
+          <div class="input-field col s12 m6">
+            <input id="linkedIn" type="text" class="validate active" placeholder="{{ usersEdit.user.linkedIn }}" ng-model="usersEdit.user.linkedIn">
+            <label for="linkedIn">LinkedIn</label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-field col s12">
+            <input id="portfolio" type="text" class="validate active" placeholder="{{ usersEdit.user.personalWebsite }}" ng-model="usersEdit.user.personalWebsite">
+            <label for="portfolio">Personal Site</label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-field col s12">
+            <input id="profilePicture" type="text" class="validate active" placeholder="{{ usersEdit.user.profilePicture }}" ng-model="usersEdit.user.profilePicture">
+            <label for="portfolio">Profile Picture</label>
+          </div>
+        </div>
+        <input type="submit" class="waves-effect waves-light btn" value="Submit">
+      </div>
+    </form>
+  </div>
+</div>
