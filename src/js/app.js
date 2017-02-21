@@ -1,6 +1,6 @@
 angular
-  .module('secretChef', [
-    'ui.router',
-    'ngResource',
-    'angular-jwt'
-  ]);
+.module('secretChef', [
+  'ui.router',
+  'ngResource',
+  'angular-jwt'
+]);

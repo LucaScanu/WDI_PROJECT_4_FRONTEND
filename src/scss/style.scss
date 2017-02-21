@@ -1,4 +1,10 @@
 // Import all of your scss files here
+.navbar-header{
+  background-color: #E0E0E0;
+}
+#bs-example-navbar-collapse-1 {
+  background-color: #EEEEEE;
+}
 
 body {
   background-color: #FAFAFA;
@@ -14,4 +20,39 @@ h2 {
 }
 form {
   text-align: center;
+}
+
+#works {
+  padding-top: 100px;
+  padding-left: 50px;
+  display: inline-block;
+}
+#experiences {
+  display: inline-block;
+  padding-left: 50px;
+}
+#abouts {
+  display: inline-block;
+  float: right;
+  padding-right: 50px;
+  padding-top: 100px;
+}
+#experiences {
+  display: inline-block;
+  padding-left: 50px;
+  padding-top: 150px;
+}
+#signup {
+  display:inline-block;
+  float: right;
+  padding-right: 50px;
+  padding-top: 150px;
+}
+
+img {
+  padding-bottom: 23px;
+}
+
+.navlogo {
+  padding-top: 13px;
 }
