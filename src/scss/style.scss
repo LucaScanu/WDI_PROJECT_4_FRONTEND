@@ -7,7 +7,7 @@
 }
 
 body {
-  background-color: #FAFAFA;
+  background-color: #FFFFFF;
 }
 
 
@@ -43,7 +43,7 @@ form {
   padding-top: 150px;
 }
 #signup {
-  display:inline-block;
+  display: inline-block;
   float: right;
   padding-right: 50px;
   padding-top: 150px;
@@ -55,4 +55,29 @@ img {
 
 .navlogo {
   padding-top: 13px;
+}
+
+#works-icon {
+  padding-left: 3px;
+}
+
+.reg-icon {
+    padding-left: 5px;
+  padding-top: 5px;
+}
+
+.search-icon {
+    padding-left: 5px;
+}
+
+.food-icon {
+    padding-left: 5px;
+   padding-left: 5px;
+}
+
+#abouts {
+  // text-align: right;
+   width:350px; /* or whatever width you want. */
+   max-width:350px; /* or whatever width you want. */
+   display: inline-block;
 }
