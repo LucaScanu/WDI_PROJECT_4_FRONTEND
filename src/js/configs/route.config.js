@@ -22,7 +22,13 @@ function Router($stateProvider, $locationProvider, $urlRouterProvider){
       templateUrl: '/js/views/login.html',
       controller: 'LoginCtrl',
       controllerAs: 'login'
-    });
+    })
+    .state('usersShow', {
+    url: '/users/:id',
+    templateUrl: '/js/views/users/show.html',
+    controller: 'UsersShowCtrl',
+    controllerAs: 'usersShow'
+  });
 
     $urlRouterProvider.otherwise('/');
 }

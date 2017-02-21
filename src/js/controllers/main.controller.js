@@ -1,9 +1,20 @@
 angular
-  .module('secretChef')
-  .controller('MainCtrl', MainCtrl);
+.module('secretChef')
+.controller('MainCtrl', MainCtrl);
 
-MainCtrl.$inject = ['$state'];
-function MainCtrl($state) {
+MainCtrl.$inject = ['$rootScope', 'CurrentUserService', '$state'];
+function MainCtrl($rootScope, CurrentUserService, $state) {
   const vm = this;
 
+  $rootScope.$on('loggedIn', () => {
+    vm.user = CurrentUserService.currentUser;
+    });
+  $rootScope.$on('loggedOut', () => {
+    vm.user = null;
+    $state.go('login');
+  });
+
+  vm.logout = () => {
+    CurrentUserService.removeUser();
+  }
 }
