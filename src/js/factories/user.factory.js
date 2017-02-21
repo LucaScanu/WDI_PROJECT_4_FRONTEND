@@ -8,5 +8,3 @@ function userFactory(API, $resource) {
     register: { method: 'POST', url: `${API}/register`}
   });
 }
-
-}
