@@ -8,7 +8,7 @@ function EventsIndexCtrl(Event) {
   Event
     .query().$promise
     .then(data => {
-      console.log(data)
+      console.log(data);
       vm.events = data;
     });
 }

@@ -12,7 +12,7 @@ function EventsShowCtrl(Event, $stateParams, Request) {
       request: {
         event_id: eventToRequest.id
       }
-    }
+    };
     Request.save(request).$promise
     .then(data => {
       // Refresh the event... could improve
@@ -20,5 +20,5 @@ function EventsShowCtrl(Event, $stateParams, Request) {
     }, err => {
       console.log(err);
     });
-  }
+  };
 }

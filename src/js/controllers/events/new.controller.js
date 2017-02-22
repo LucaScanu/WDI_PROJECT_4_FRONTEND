@@ -11,9 +11,9 @@ vm.categories = Category.query();
   vm.submit = (newEvent) => {
     Event.save({ event: newEvent }).$promise
     .then(data => {
-      $state.go('eventsIndex')
+      $state.go('eventsIndex');
     }, err => {
       console.log(err);
-    })
-  }
+    });
+  };
 }
