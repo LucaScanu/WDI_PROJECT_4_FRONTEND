@@ -10,10 +10,9 @@ function LoginCtrl(User, CurrentUserService, $rootScope, $state, $stateParams) {
     User
     .login(vm.user)
     .$promise
-    .then((user) => {
-      CurrentUserService.getUser();
-      if(vm.user.role !== 'guest') {
-        $state.go('usersShow', { id: `${$stateParams.id}` });
+    .then(data => {
+      if(data.user.role !== 'guest') {
+        $state.go('usersShow', { id: data.user.id });
       } else {
         $state.go('eventsIndex');
       }
