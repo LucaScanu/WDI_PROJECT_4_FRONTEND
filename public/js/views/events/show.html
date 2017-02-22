@@ -1,0 +1,18 @@
+<div class="container">
+  <img ng-src="{{ eventsShow.event.image }}" alt="">
+  <div class="caption">
+    <h1>{{ eventsShow.event.name }}</h1>
+    <h3>{{ eventsShow.event.date }}</h3>
+    <h2>by {{ eventsShow.event.user.first_name }} {{ eventsShow.event.user.last_name }}</h2>
+    <p><strong>Location</strong> {{ eventsShow.event.location }} </p>
+    <p> {{ eventsShow.event.description }} </p>
+    <p> {{ eventsShow.event.category.name }} </p>
+    <p><strong>Maximum guests</strong> {{ eventsShow.event.maximum_guests }} </p>
+    <p><strong>Available spaces</strong> {{ eventsShow.event.available_spaces }} </p>
+    <p><strong>House rules</strong> {{ eventsShow.event.house_rules }} </p>
+    <div class="update" ng-if="currentUser.role !== chef">
+      <button class="btn btn-primary" ui-sref="eventsEdit({ id: eventsShow.event.id })">Edit</button>
+        </div>
+    <button class="btn btn-primary" ng-click="eventsShow.request(eventsShow.event)">Book</button>
+  </div>
+  </div>
