@@ -7,11 +7,13 @@
       <h3>{{usersShow.user.first_name}} {{usersShow.user.last_name}}</h3><br><br><br>
     </div>
     <div class="user-details">
-          <br>
+      <br>
       <p>{{usersShow.user.email}}</p>
     </div>
   </div>
-  <div class="update">
-        <a class="edit-details" ui-sref="usersEdit({ id: usersShow.user.id })">edit</a>
-      </div>
+  <div ng-if="usersShow.user.id === main.user.id">
+    <button class="btn btn-primary" ui-sref="usersEdit({ id: usersShow.user.id })">Edit</button>
+    <button class="btn btn-warning" ng-click="usersShow.delete()">Delete</button>
+  </div>
+
 </div>

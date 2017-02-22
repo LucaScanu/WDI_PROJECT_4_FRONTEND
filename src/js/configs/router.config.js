@@ -41,6 +41,12 @@ function Router($stateProvider, $locationProvider, $urlRouterProvider){
     controller: 'UsersEditCtrl',
     controllerAs: 'usersEdit'
   })
+  .state('usersDelete', {
+    url: '/users/:id/delete',
+    templateUrl: '/js/views/users/delete.html',
+    controller: 'UsersDeleteCtrl',
+    controllerAs: 'usersDelete'
+  })
   .state('eventsIndex', {
     url: '/events',
     templateUrl: '/js/views/events/index.html',
