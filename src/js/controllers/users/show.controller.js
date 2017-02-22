@@ -2,17 +2,9 @@ angular
   .module('secretChef')
   .controller('UsersShowCtrl', UsersShowCtrl);
 
-UsersShowCtrl.$inject = ['$http', 'API', '$state', '$stateParams'];
-function UsersShowCtrl($http, API, $state, $stateParams){
+UsersShowCtrl.$inject = ['User', '$stateParams'];
+function UsersShowCtrl(User, $stateParams){
   const vm = this;
 
-  usersShow();
-
-  function usersShow(){
-    return $http
-      .get(`${API}/users/${$stateParams.id}`)
-      .then(response => {
-        vm.user = response.data;
-      });
-  }
+  vm.user = User.get($stateParams);
 }

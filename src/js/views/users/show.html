@@ -1,5 +1,14 @@
-<h2>{{ users.user.first_name }}</h2>
-<!-- <img ng-src="{{ users.user.image }}" alt="{{ users.user.first_name }}">
-<hr>
-<button class="btn btn-primary" ui-sref="usersEdit({ id: users.user._id })">Edit</button>
-<button class="btn btn-warning" ng-click="users.delete()">Delete</button> -->
+<div class="container">
+  <div class="user">
+    <div class="user-background">
+    </div>
+    <div class="user-details">
+      <img class="user-img" src="{{usersShow.user.image}}" alt="Click edit and insert your own profile picture">
+      <h3>{{usersShow.user.first_name}} {{usersShow.user.last_name}}</h3><br><br><br>
+    </div>
+    <div class="user-details">
+          <br>
+      <p>{{usersShow.user.email}}</p>
+    </div>
+  </div>
+</div>
