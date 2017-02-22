@@ -1,9 +1,9 @@
 angular
 .module('secretChef')
-.controller('EventsShowCtrl', EventsShowCtrl);
+.controller('EventsEditCtrl', EventsEditCtrl);
 
-EventsShowCtrl.$inject = ['Event', '$stateParams', 'Request'];
-function EventsShowCtrl(Event, $stateParams, Request) {
+EventsEditCtrl.$inject = ['Event', '$stateParams', 'Request', '$state'];
+function EventsEditCtrl(Event, $stateParams, Request, $state) {
   const vm  = this;
   vm.event = Event.get($stateParams);
   vm.update = eventUpdate;

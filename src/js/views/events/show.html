@@ -10,6 +10,10 @@
     <p><strong>Maximum guests</strong> {{ eventsShow.event.maximum_guests }} </p>
     <p><strong>Available spaces</strong> {{ eventsShow.event.available_spaces }} </p>
     <p><strong>House rules</strong> {{ eventsShow.event.house_rules }} </p>
-    <button ng-click="eventsShow.request(eventsShow.event)">Request</button>
+    <div class="update">
+      <button class="btn btn-primary" ui-sref="eventsEdit({ id: eventsShow.event.id })">Edit</button>
+          <!-- <a class="edit-details" ui-sref="usersEdit({ id: usersShow.user.id })">edit</a> -->
+        </div>
+    <button class="btn btn-primary" ng-click="eventsShow.request(eventsShow.event)">Request</button>
   </div>
   </div>
