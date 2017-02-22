@@ -2,18 +2,21 @@ angular
   .module('secretChef')
   .controller('LoginCtrl', LoginCtrl);
 
-LoginCtrl.$inject = ['User', 'CurrentUserService', '$rootScope', '$state'];
-function LoginCtrl(User, CurrentUserService, $rootScope, $state) {
+LoginCtrl.$inject = ['User', 'CurrentUserService', '$rootScope', '$state', '$stateParams'];
+function LoginCtrl(User, CurrentUserService, $rootScope, $state, $stateParams) {
   const vm = this;
 
   vm.login = () => {
     User
     .login(vm.user)
     .$promise
-    .then(() => {
+    .then((user) => {
       CurrentUserService.getUser();
-      // $rootScope.$broadcast('loggedIn');
-      $state.go('usersIndex');
+      if(vm.user.role !== 'guest') {
+        $state.go('usersShow', { id: `${$stateParams.id}` });
+      } else {
+        $state.go('eventsIndex');
+      }
     }, err => {
       console.log(err);
     });
