@@ -1,0 +1,31 @@
+<h1>Create event</h1>
+<form ng-submit="eventsNew.submit(eventsNew.event)">
+ <div class="form-group">
+   <input class="form-control" type="name" name="name" ng-model="eventsNew.event.name" placeholder="Name" required>
+ </div>
+ <div class="form-group">
+   <input class="form-control" type="text" name="date" ng-model="eventsNew.event.date" placeholder="Date" required>
+ </div>
+ <div class="form-group">
+   <input class="form-control" type="text" name="description" ng-model="eventsNew.event.description" placeholder="Description" required>
+ </div>
+ <div class="form-group">
+   <select name="category" ng-model="eventsNew.event.category_id">
+     <option value="">---Select category---</option>
+      <option ng-repeat="category in eventsNew.categories" value="{{ category.id }}">{{ category.name }}</option>
+    </select>
+ </div>
+ <div class="form-group">
+ <input class="form-control" type="number" name="maximum_guests" ng-model="eventsNew.event.maximum_guests" placeholder="Maximum Guests" required>
+</div>
+<div class="form-group">
+<input class="form-control" type="text" name="house_rules" ng-model="eventsNew.event.house_rules" placeholder="House Rules" required>
+</div>
+<div class="form-group">
+<input class="form-control" type="text" name="location" ng-model="eventsNew.event.location" placeholder="Address" required>
+</div>
+<div class="form-group">
+<input class="form-control" type="text" name="price_per_head" ng-model="eventsNew.event.price_per_head" placeholder="Price" required>
+</div>
+ <input class="btn btn-primary btn-block" type="submit" value="Submit">
+</form>

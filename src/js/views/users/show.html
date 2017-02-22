@@ -1,0 +1,17 @@
+<div class="container">
+  <div class="user">
+    <div class="user-background">
+    </div>
+    <div class="user-details">
+      <img class="user-img" src="{{usersShow.user.image}}" alt="Click edit and insert your own profile picture">
+      <h3>{{usersShow.user.first_name}} {{usersShow.user.last_name}}</h3><br><br><br>
+    </div>
+    <div class="user-details">
+          <br>
+      <p>{{usersShow.user.email}}</p>
+    </div>
+  </div>
+  <div class="update">
+        <a class="edit-details" ui-sref="usersEdit({ id: usersShow.user.id })">edit</a>
+      </div>
+</div>
