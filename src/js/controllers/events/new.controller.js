@@ -2,9 +2,12 @@ angular
 .module('secretChef')
 .controller('EventsNewCtrl', EventsNewCtrl);
 
-EventsNewCtrl.$inject = ['Event', '$state'];
-function EventsNewCtrl(Event, $state) {
+EventsNewCtrl.$inject = ['Event', 'Category', '$state'];
+function EventsNewCtrl(Event, Category, $state) {
   const vm  = this;
+
+vm.categories = Category.query();
+
   vm.submit = (newEvent) => {
     Event.save({ event: newEvent }).$promise
     .then(data => {

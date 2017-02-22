@@ -2,11 +2,11 @@
   <div class="col-sm-6 col-md-4" ng-repeat="user in usersIndex.users track by $index">
     <div class="thumbnail">
       <a ui-sref="usersShow({ id: user.id })">
-        <img ng-src="user.image">
+        <img ng-src="{{user.image}}">
       </a>
       <div class="caption">
         <h3>{{ user.first_name }} {{ user.last_name }}</h3>
-        <p><a ui-sref="usersShow({ id: user.id })" class="btn btn-primary" role="button">View</a>
+        <p><a ui-sref="usersShow({ id: user.id })" class="btn btn-primary" role="button">View</a></p>
       </div>
     </div>
   </div>
