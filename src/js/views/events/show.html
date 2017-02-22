@@ -1,6 +1,15 @@
-<h1>{{ eventsShow.event.name }}</h1>
-
-<pre>{{ eventsShow.event }}</pre>
-
-<button>Edit</button>
-<button ng-click="eventsShow.request(eventsShow.event)">Request</button>
+<div class="container">
+  <!-- <img src="..." alt="..."> -->
+  <div class="caption">
+    <h1>{{ eventsShow.event.name }}</h1>
+    <h3>{{ eventsShow.event.date }}</h3>
+    <h2>by {{ eventsShow.event.user.first_name }} {{ eventsShow.event.user.last_name }}</h2>
+    <p><strong>Location</strong> {{ eventsShow.event.location }} </p>
+    <p> {{ eventsShow.event.description }} </p>
+    <p> {{ eventsShow.event.category.name }} </p>
+    <p><strong>Maximum guests</strong> {{ eventsShow.event.maximum_guests }} </p>
+    <p><strong>Available spaces</strong> {{ eventsShow.event.available_spaces }} </p>
+    <p><strong>House rules</strong> {{ eventsShow.event.house_rules }} </p>
+    <button ng-click="eventsShow.request(eventsShow.event)">Request</button>
+  </div>
+  </div>
