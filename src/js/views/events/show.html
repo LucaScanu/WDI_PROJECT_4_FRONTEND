@@ -1,5 +1,5 @@
 <div class="container">
-  <!-- <img src="..." alt="..."> -->
+  <img ng-src="{{ eventsShow.event.image }}" alt="">
   <div class="caption">
     <h1>{{ eventsShow.event.name }}</h1>
     <h3>{{ eventsShow.event.date }}</h3>
@@ -14,6 +14,6 @@
       <button class="btn btn-primary" ui-sref="eventsEdit({ id: eventsShow.event.id })">Edit</button>
           <!-- <a class="edit-details" ui-sref="usersEdit({ id: usersShow.user.id })">edit</a> -->
         </div>
-    <button class="btn btn-primary" ng-click="eventsShow.request(eventsShow.event)">Request</button>
+    <button class="btn btn-primary" ng-click="eventsShow.request(eventsShow.event)">Book</button>
   </div>
   </div>

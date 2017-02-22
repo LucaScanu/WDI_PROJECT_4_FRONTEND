@@ -13,7 +13,7 @@ function EventsEditCtrl(Event, $stateParams, Request, $state) {
     .update({ id: $stateParams.id }, vm.event)
     .$promise
     .then(() => {
-      $state.go('eventsShow', { id: `${$stateParams.id}` });
+      $state.go('eventsIndex', { id: `${$stateParams.id}` });
     });
   }
 }

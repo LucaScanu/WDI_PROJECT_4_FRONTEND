@@ -14,7 +14,7 @@ function UsersEditCtrl(User, $stateParams, $state, CurrentUserService){
     .update({ id: $stateParams.id }, vm.user)
     .$promise
     .then(() => {
-      $state.go('usersShow', { id: `${$stateParams.id}` });
+      $state.go('usersIndex', { id: `${$stateParams.id}` });
     });
   }
 }
