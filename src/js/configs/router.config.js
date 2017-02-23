@@ -9,7 +9,9 @@ function Router($stateProvider, $locationProvider, $urlRouterProvider){
   $stateProvider
   .state('home', {
     url: '/',
-    templateUrl: '/js/views/home.html'
+    templateUrl: '/js/views/home.html',
+    controller: 'HomeCtrl',
+    controllerAs: 'homeCtrl'
   })
   .state('register', {
     url: '/register',
@@ -70,6 +72,12 @@ function Router($stateProvider, $locationProvider, $urlRouterProvider){
     templateUrl: '/js/views/events/edit.html',
     controller: 'EventsEditCtrl',
     controllerAs: 'eventsEdit'
+  })
+  .state('categoryShow', {
+    url: '/categories/:id',
+    templateUrl: '/js/views/categories/show.html',
+    controller: 'CategoriesShowCtrl',
+    controllerAs: 'categoriesShow'
   });
 
   $urlRouterProvider.otherwise('/');
