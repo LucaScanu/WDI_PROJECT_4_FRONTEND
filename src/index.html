@@ -35,13 +35,13 @@
             <li ng-if="main.user">
               <a ui-sref="">Received Requests (tbc)</a>
             </li> -->
-            <li ng-if="main.user">
+            <!-- <li ng-if="main.user">
               <a ui-sref="usersIndex">Users</a>
-            </li>
-            <li ng-if="main.user">
+            </li> -->
+            <!-- <li ng-if="main.user">
               <a ui-sref="eventsIndex">Events</a>
-            </li>
-            <li ng-if="main.user">
+            </li> -->
+            <li ng-if="!main.user">
               <a ui-sref="eventsNew">New Event</a>
             </li>
             <li ng-if="!main.user">
@@ -50,9 +50,9 @@
             <li ng-if="!main.user">
               <a ui-sref="login">Login</a>
             </li>
-            <li ng-if="main.user">
+            <!-- <li ng-if="main.user">
               <a ui-sref="usersShow">User</a>
-            </li>
+            </li> -->
             <li ng-if="main.user">
               <a ng-click="main.logout()">Logout</a>
             </li>

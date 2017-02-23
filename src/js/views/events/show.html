@@ -4,15 +4,18 @@
     <h1>{{ eventsShow.event.name }}</h1>
     <h3>{{ eventsShow.event.date }}</h3>
     <h2>by {{ eventsShow.event.user.first_name }} {{ eventsShow.event.user.last_name }}</h2>
-    <p><strong>Location</strong> {{ eventsShow.event.location }} </p>
-    <p> {{ eventsShow.event.description }} </p>
-    <p> {{ eventsShow.event.category.name }} </p>
-    <p><strong>Maximum guests</strong> {{ eventsShow.event.maximum_guests }} </p>
-    <p><strong>Available spaces</strong> {{ eventsShow.event.available_spaces }} </p>
-    <p><strong>House rules</strong> {{ eventsShow.event.house_rules }} </p>
+    <h2>Location:</h2><span> {{ eventsShow.event.location }} </span>
+    <h2> {{ eventsShow.event.description }} </h2>
+    <h2> {{ eventsShow.event.category.name }} </h2>
+    <h2>Maximum guests</h2> {{ eventsShow.event.maximum_guests }} 
+    <h2>Available spaces</h2> {{ eventsShow.event.available_spaces }} 
+    <h2>House rules</h2> {{ eventsShow.event.house_rules }} 
     <div class="update" ng-if="currentUser.role !== chef">
       <button class="btn btn-primary" ui-sref="eventsEdit({ id: eventsShow.event.id })">Edit</button>
-        </div>
-    <button class="btn btn-primary" ng-click="eventsShow.request(eventsShow.event)">Book</button>
-  </div>
-  </div>
+    </div>
+    <!-- <div>
+      <button class="btn btn-primary" ng-click="eventsShow.request(eventsShow.event)">Book</button>
+    </div> -->
+
+</div>
+</div>

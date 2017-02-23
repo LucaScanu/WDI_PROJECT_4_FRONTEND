@@ -7,8 +7,8 @@
   <p>{{event.name}}</p>
 </li>
 </ul>
-<ng-map ng-if="categoriesShow.showMap" center="{{categoriesShow.category.events[0].latitude}},{{categoriesShow.category.events[0].longitude}}" zoom="12">
-  <marker ng-repeat="event in categoriesShow.category.events" position="[{{event.latitude}}, {{event.longitude}}]" title="{{event.name}}" on-click="categoriesShow.goToEvent({{event}})" icon="{{categoriesShow.category.events[0].image}}"></marker>
+<ng-map class="map" ng-if="categoriesShow.showMap" center="{{categoriesShow.category.events[0].latitude}},{{categoriesShow.category.events[0].longitude}}" zoom="15" default-style="false">
+  <marker id="marker" ng-repeat="event in categoriesShow.category.events" position="[{{event.latitude}}, {{event.longitude}}]" title="{{event.name}}" on-click="categoriesShow.goToEvent({{event}})"></marker>
 </ng-map>
 </div>
 
