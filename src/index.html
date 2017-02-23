@@ -6,8 +6,10 @@
   <base href="/" />
   <!-- inject:js -->
   <!-- endinject -->
+  <script src="http://maps.google.com/maps/api/js?key=AIzaSyDGq7QUMuE1YFS_zYDXrrMlVOg8EFwH2-M"></script>
   <!-- inject:css -->
   <!-- endinject -->
+  <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
 </head>
 <body ng-controller="MainCtrl as main">
   <header>
@@ -27,12 +29,6 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav navbar-right">
-            <li ng-if="main.user">
-              <a ui-sref="usersIndex">Chefs (tbc)</a>
-            </li>
-            <li ng-if="main.user">
-              <a ui-sref="usersIndex">Guests (tbc)</a>
-            </li>
             <!-- <li ng-if="main.user">
               <a ui-sref="">Sent Requests (tbc)</a>
             </li>
@@ -62,7 +58,6 @@
       </div><!-- /.container-fluid -->
     </nav>
   </header>
-  <!-- in the main tag we will display our different states, also called child controller-->
   <main class="container" ui-view></main>
 </body>
 </html>

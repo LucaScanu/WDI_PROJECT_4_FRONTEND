@@ -2,8 +2,8 @@ angular
   .module('secretChef')
   .controller('LoginCtrl', LoginCtrl);
 
-LoginCtrl.$inject = ['User', 'CurrentUserService', '$rootScope', '$state', '$stateParams'];
-function LoginCtrl(User, CurrentUserService, $rootScope, $state, $stateParams) {
+LoginCtrl.$inject = ['User', '$state', 'CurrentUserService'];
+function LoginCtrl(User, $state, CurrentUserService) {
   const vm = this;
 
   vm.login = () => {
@@ -11,11 +11,11 @@ function LoginCtrl(User, CurrentUserService, $rootScope, $state, $stateParams) {
     .login(vm.user)
     .$promise
     .then(data => {
-      if(data.user.role !== 'guest') {
-        $state.go('usersShow', { id: data.user.id });
-      } else {
-        $state.go('eventsIndex');
+      if (data.user){
+        CurrentUserService.getUser()
       }
+      console.log(data.user);
+
     }, err => {
       console.log(err);
     });

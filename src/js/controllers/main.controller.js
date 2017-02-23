@@ -7,7 +7,13 @@ function MainCtrl($rootScope, CurrentUserService, $state) {
   const vm = this;
 
   $rootScope.$on('loggedIn', () => {
+    console.log('this is running');
     vm.user = CurrentUserService.currentUser;
+    if(vm.user.role !== 'guest') {
+      $state.go('usersShow', { id: vm.user.id });
+    } else {
+      $state.go('eventsIndex');
+    }
   });
 
   $rootScope.$on('loggedOut', () => {
