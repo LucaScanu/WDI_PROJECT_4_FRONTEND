@@ -12,7 +12,7 @@ function LoginCtrl(User, $state, CurrentUserService) {
     .$promise
     .then(data => {
       if (data.user){
-        CurrentUserService.getUser()
+        CurrentUserService.getUser();
       }
       console.log(data.user);
 

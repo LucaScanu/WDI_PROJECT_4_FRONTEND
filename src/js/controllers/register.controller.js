@@ -9,7 +9,7 @@ function RegisterCtrl(User, $state, CurrentUserService) {
     User.register(vm.user).$promise
     .then(data => {
       if (data.user){
-        CurrentUserService.getUser()
+        CurrentUserService.getUser();
       }
       // if(data.user.role !== 'guest') {
       //   $state.go('usersShow', { id: data.user.id });

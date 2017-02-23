@@ -13,13 +13,16 @@ function CategoriesShowCtrl(Category, $stateParams, Request, NgMap, $state) {
     vm.category = data;
 
     if (vm.category.events.length){
-      // setTimeout(() => {
         vm.showMap = true;
         NgMap.getMap().then(function(map) {
-        console.log(map.getCenter());
-      // }, 100);
-    });
-
+          vm.showCustomMarker= function(evt) {
+              map.customMarkers.foo.setVisible(true);
+              map.customMarkers.foo.setPosition(this.getPosition());
+            };
+            vm.closeCustomMarker= function(evt) {
+              this.style.display = 'none';
+            };
+        });
     }
 
     vm.goToEvent = (clickevent, event) => {

@@ -10,5 +10,5 @@ function HomeCtrl($state, Category) {
   .$promise
   .then(data => {
     vm.categories = data;
-  })
+  });
 }
