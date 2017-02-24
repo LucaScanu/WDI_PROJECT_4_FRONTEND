@@ -1,10 +1,11 @@
 <div class="container event">
-  <img class="appImage" ng-src="{{ eventsShow.event.image }}" alt="">
+  <img class="appImage" src="../images/pic1.jpg" alt="">
   <div class="caption">
     <h1>{{ eventsShow.event.name }}</h1>
     <h3>{{ eventsShow.event.date }}</h3>
-    <h2 ui-sref="usersShow({ id: usersShow.user.id })">by {{ eventsShow.event.user.first_name }} {{ eventsShow.event.user.last_name }}</h2>
+    <h2 ui-sref="usersShow({ id: usersShow.user.id })">by: {{ eventsShow.event.user.first_name }} {{ eventsShow.event.user.last_name }}</h2>
     <h2>Location:</h2><span> {{ eventsShow.event.location }} </span>
+    <br>
     <h2> {{ eventsShow.event.description }} </h2>
     <h2> {{ eventsShow.event.category.name }} </h2>
     <h2>Maximum guests</h2> {{ eventsShow.event.maximum_guests }}

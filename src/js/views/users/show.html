@@ -4,16 +4,32 @@
     </div>
     <div class="user-details">
       <img class="appImage user-img" src="{{usersShow.user.image}}" alt="Click edit and insert your own profile picture">
-      <h3>{{usersShow.user.first_name}} {{usersShow.user.last_name}}</h3><br><br><br>
+      </div>
+      <div class="user content">
+      <h3>{{usersShow.user.first_name}} {{usersShow.user.last_name}}</h3>
     </div>
     <div class="user-details">
       <br>
+      <div class="user content">
       <p>{{usersShow.user.email}}</p>
     </div>
   </div>
   <div ng-if="usersShow.user.id === main.user.id">
     <button class="btn btn-primary" ui-sref="usersEdit({ id: usersShow.user.id })">Edit</button>
     <button class="btn btn-warning" ng-click="usersShow.delete()">Delete</button>
+    <br>
+    <br>
+    <p ui-sref="eventsNew">Create a new Event</p>
   </div>
-
+  <div class="">
+    <p>{{eventsShow.event.user.first_name}}</p>
+  </div>
+</div>
+</div>
+<div class="content-section-b background-bottom">
+  <span><strong>Get in Contact</strong></span>
+  <span><strong>About Us</strong></span>
+  <img class="logo" src="../images/Facebook_Logo.png">
+  <img class="logo" src="../images/Instagram-Logo.png">
+  <img class="logo" src="../images/Twitter_Logo.png">
 </div>
