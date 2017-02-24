@@ -1,0 +1,20 @@
+.footer {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+  background-color: $primary-color;
+  text-align: center;
+  border-top: 1px solid $secondary-color;
+}
+.logo {
+  width: 20px;
+  height: 20px;
+  float: right;
+  margin-right: 10px;
+}
+span {
+  float: left;
+  margin-right: 10px;
+}

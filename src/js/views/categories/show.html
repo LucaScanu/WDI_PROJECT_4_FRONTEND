@@ -1,0 +1,18 @@
+<div class="map">
+<h1>{{categoriesShow.category.name}}</h1>
+<div ng-show="categoriesShow.category.events.length">
+  <h2>{{categoriesShow.category.name}} events:</h2>
+  <ul>
+  <li ng-repeat="event in categoriesShow.category.events">
+  <p>{{event.name}}</p>
+</li>
+</ul>
+<ng-map class="map" ng-if="categoriesShow.showMap" center="{{categoriesShow.category.events[0].latitude}},{{categoriesShow.category.events[0].longitude}}" zoom="15" default-style="false">
+  <marker id="marker" ng-repeat="event in categoriesShow.category.events" position="[{{event.latitude}}, {{event.longitude}}]" title="{{event.name}}" on-click="categoriesShow.goToEvent({{event}})"></marker>
+</ng-map>
+</div>
+
+<div ng-hide="categoriesShow.category.events.length">
+  <h2 ui-sref="home">No {{categoriesShow.category.name}} events available at the moment</h2>
+</div>
+</div>

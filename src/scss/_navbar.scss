@@ -1,0 +1,16 @@
+nav.navbar.navbar-default {
+  background-color: $primary-color;
+}
+
+.navbar {
+    border-bottom: 1px solid $secondary-color;
+}
+
+.navbar-default .navbar-brand {
+  color: $secondary-color;
+}
+
+.navbar-default .navbar-nav > li > a {
+  color: $secondary-color;
+  font-weight: bold;
+}

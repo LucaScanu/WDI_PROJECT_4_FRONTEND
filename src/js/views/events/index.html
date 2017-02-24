@@ -1,0 +1,18 @@
+<div class="row">
+  <div class="col-sm-6 col-md-4" ng-repeat="event in eventsIndex.events track by $index">
+    <div class="thumbnail">
+      <img class="appImage" ng-src="{{ event.image }}">
+      <div class="caption">
+        <h3>{{ event.name }}</h3>
+        <h3>{{ event.date }}</h3>
+        <h2>by {{ event.user.first_name }} {{ event.user.last_name }}</h2>
+        <p><strong>Location</strong> {{ event.location }} </p>
+        <p> {{ event.description }} </p>
+        <p><strong>Maximum guests</strong> {{ event.maximum_guests }} </p>
+        <p><strong>Available spaces</strong> {{ event.available_spaces }} </p>
+        <p><strong>House rules</strong> {{ event.house_rules }} </p>
+        <p><a ui-sref="eventsShow({ id: event.id })" class="btn btn-primary" role="button">View</a></p>
+      </div>
+    </div>
+  </div>
+</div>

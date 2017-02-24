@@ -1,0 +1,22 @@
+<h2>Edit Event</h2>
+
+<form ng-submit="eventsEdit.update()">
+  <div class="form-group">
+
+    <label for="name">Name</label>
+    <input type="text" class="form-control" id="name" name="name" ng-model="eventsEdit.event.name">
+
+    <label for="date">Date</label>
+    <input type="text" class="form-control" id="date" name="date" ng-model="eventsEdit.event.date">
+
+    <label for="description">Description</label>
+    <input type="text" class="form-control" id="description" name="description" ng-model="eventsEdit.event.description">
+
+    <label for="maximum_guests">Maximum Guests</label>
+    <input type="text" class="form-control" id="maximum_guests" name="maximum_guests" ng-model="eventsEdit.event.maximum_guests">
+
+  </div>
+
+  <input type="submit" class="btn btn-default btn-block" value="Add">
+
+  </form>
