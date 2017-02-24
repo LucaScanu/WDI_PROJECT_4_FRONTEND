@@ -5,7 +5,6 @@ angular
 UsersShowCtrl.$inject = ['User', '$stateParams', '$state', 'CurrentUserService'];
 function UsersShowCtrl(User, $stateParams, $state, CurrentUserService){
   const vm = this;
-
   vm.user = User.get($stateParams);
   vm.delete = usersDelete;
 

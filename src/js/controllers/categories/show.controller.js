@@ -15,13 +15,13 @@ function CategoriesShowCtrl(Category, $stateParams, Request, NgMap, $state) {
     if (vm.category.events.length){
         vm.showMap = true;
         NgMap.getMap().then(function(map) {
-          vm.showCustomMarker= function(evt) {
-              map.customMarkers.foo.setVisible(true);
-              map.customMarkers.foo.setPosition(this.getPosition());
-            };
-            vm.closeCustomMarker= function(evt) {
-              this.style.display = 'none';
-            };
+          // vm.showCustomMarker= function(evt) {
+          //     map.customMarkers.foo.setVisible(true);
+          //     map.customMarkers.foo.setPosition(this.getPosition());
+          //   };
+          //   vm.closeCustomMarker= function(evt) {
+          //     this.style.display = 'none';
+          //   };
         });
     }
 

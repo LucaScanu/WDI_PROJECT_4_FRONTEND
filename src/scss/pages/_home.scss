@@ -1,9 +1,10 @@
 .container.home {
-  background-image: url('../images/home.jpg');
+  background-image: $primary-image;
+  opacity: 0.7;
   background-size: cover;
   padding-left: 0px;
   padding-right: 0px;
-  height: 660px;
+  height: 450px;
   text-align: center;
 }
 
