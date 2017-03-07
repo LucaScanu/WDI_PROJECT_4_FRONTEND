@@ -1,3 +1,3 @@
 angular
   .module('secretChef')
-  .constant('API', 'http://localhost:3000');
+  .constant('API', 'https://secret-chef-api.herokuapp.com/');
