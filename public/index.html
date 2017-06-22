@@ -4,17 +4,24 @@
   <meta charset="utf-8">
   <title>Secret Chef</title>
   <base href="/" />
+
+  <link href="https://fonts.googleapis.com/css?family=Overpass:300,400,600" rel="stylesheet">
+  <!-- inject:css -->
+
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- endinject -->
+
   <!-- inject:js -->
   <script src="js/app.js"></script>
   <!-- endinject -->
-  <!-- inject:css -->
-  <link rel="stylesheet" href="css/style.css">
-  <!-- endinject -->
+
 </head>
 <body ng-controller="MainCtrl as main">
   <header>
     <nav class="navbar navbar-default">
       <div class="container">
+
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
@@ -23,39 +30,36 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" ui-sref="home">SecretChef</a>
+          <a class="navbar-brand" ui-sref="landing">SecretChef</a>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav navbar-right">
-            <li ng-if="main.user">
-              <a ui-sref="usersIndex">Chefs (tbc)</a>
-            </li>
-            <li ng-if="main.user">
-              <a ui-sref="usersIndex">Guests (tbc)</a>
-            </li>
             <!-- <li ng-if="main.user">
               <a ui-sref="">Sent Requests (tbc)</a>
             </li>
             <li ng-if="main.user">
               <a ui-sref="">Received Requests (tbc)</a>
             </li> -->
-            <li ng-if="main.user">
+            <!-- <li ng-if="main.user">
               <a ui-sref="usersIndex">Users</a>
-            </li>
-            <li ng-if="main.user">
+            </li> -->
+            <!-- <li ng-if="main.user">
               <a ui-sref="eventsIndex">Events</a>
-            </li>
-            <li ng-if="main.user">
+            </li> -->
+            <!-- <li ng-if="main.user">
               <a ui-sref="eventsNew">New Event</a>
-            </li>
+            </li> -->
             <li ng-if="!main.user">
               <a ui-sref="register">Register</a>
             </li>
             <li ng-if="!main.user">
               <a ui-sref="login">Login</a>
             </li>
+            <!-- <li ng-if="main.user">
+              <a ui-sref="usersShow">User</a>
+            </li> -->
             <li ng-if="main.user">
               <a ng-click="main.logout()">Logout</a>
             </li>
@@ -64,7 +68,29 @@
       </div><!-- /.container-fluid -->
     </nav>
   </header>
-  <!-- in the main tag we will display our different states, also called child controller-->
   <main class="container" ui-view></main>
+  <!-- <div class="footer">
+    <span><strong>Get in Contact</strong></span>
+    <span><strong>About Us</strong></span>
+    <img class="logo" src="../images/Facebook_Logo.png">
+    <img class="logo" src="../images/Instagram-Logo.png">
+    <img class="logo" src="../images/Twitter_Logo.png">
+  </div> -->
+    <!-- <footer class="footer">
+  <div class="footer-container">
+    <div class="text-center center-block">
+      <h4 class="txt-railway">Follow us on social media!</h4>
+      <br />
+      <a href="https://www.facebook.com"><i id="social-fb" class="fa fa-facebook-square fa-3x social"></i></a>
+      <a href="https://twitter.com"><i id="social-tw" class="fa fa-twitter-square fa-3x social"></i></a>
+      <a href="https://plus.google.com"><i id="social-gp" class="fa fa-google-plus-square fa-3x social"></i></a>
+      <i id="social-em" class="fa fa-envelope-square fa-3x social"></i>
+    </div>
+  </div>
+  <div class="modal-container">
+     Trigger the modal with a button -->
+    <!-- <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Contact Us</button>
+  </div>
+  </footer> -->
 </body>
 </html>
