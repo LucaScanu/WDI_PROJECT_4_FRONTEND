@@ -5,6 +5,9 @@
   <title>Secret Chef</title>
   <base href="/" />
 
+  <script src="https://maps.google.com/maps/api/js?key=AIzaSyDGq7QUMuE1YFS_zYDXrrMlVOg8EFwH2-M"></script>
+
+
   <link href="https://fonts.googleapis.com/css?family=Overpass:300,400,600" rel="stylesheet">
   <!-- inject:css -->
 
@@ -37,60 +40,48 @@
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav navbar-right">
             <!-- <li ng-if="main.user">
-              <a ui-sref="">Sent Requests (tbc)</a>
-            </li>
-            <li ng-if="main.user">
-              <a ui-sref="">Received Requests (tbc)</a>
-            </li> -->
-            <!-- <li ng-if="main.user">
-              <a ui-sref="usersIndex">Users</a>
-            </li> -->
-            <!-- <li ng-if="main.user">
-              <a ui-sref="eventsIndex">Events</a>
-            </li> -->
-            <!-- <li ng-if="main.user">
-              <a ui-sref="eventsNew">New Event</a>
-            </li> -->
-            <li ng-if="!main.user">
-              <a ui-sref="register">Register</a>
-            </li>
-            <li ng-if="!main.user">
-              <a ui-sref="login">Login</a>
-            </li>
-            <!-- <li ng-if="main.user">
-              <a ui-sref="usersShow">User</a>
-            </li> -->
-            <li ng-if="main.user">
-              <a ng-click="main.logout()">Logout</a>
-            </li>
-          </ul>
-        </div><!-- /.navbar-collapse -->
-      </div><!-- /.container-fluid -->
-    </nav>
-  </header>
+            <a ui-sref="">Sent Requests (tbc)</a>
+          </li>
+          <li ng-if="main.user">
+          <a ui-sref="">Received Requests (tbc)</a>
+        </li> -->
+        <!-- <li ng-if="main.user">
+        <a ui-sref="usersIndex">Users</a>
+      </li> -->
+      <!-- <li ng-if="main.user">
+      <a ui-sref="eventsIndex">Events</a>
+    </li> -->
+    <!-- <li ng-if="main.user">
+    <a ui-sref="eventsNew">New Event</a>
+  </li> -->
+  <li ng-if="!main.user">
+    <a ui-sref="register">Register</a>
+  </li>
+  <li ng-if="!main.user">
+    <a ui-sref="login">Login</a>
+  </li>
+  <!-- <li ng-if="main.user">
+  <a ui-sref="usersShow">User</a>
+</li> -->
+<li ng-if="main.user">
+  <a ng-click="main.logout()">Logout</a>
+</li>
+</ul>
+</div><!-- /.navbar-collapse -->
+</div><!-- /.container-fluid -->
+</nav>
+</header>
+<div class="container">
   <main class="container" ui-view></main>
-  <!-- <div class="footer">
-    <span><strong>Get in Contact</strong></span>
-    <span><strong>About Us</strong></span>
-    <img class="logo" src="../images/Facebook_Logo.png">
-    <img class="logo" src="../images/Instagram-Logo.png">
-    <img class="logo" src="../images/Twitter_Logo.png">
-  </div> -->
-    <!-- <footer class="footer">
-  <div class="footer-container">
-    <div class="text-center center-block">
-      <h4 class="txt-railway">Follow us on social media!</h4>
-      <br />
-      <a href="https://www.facebook.com"><i id="social-fb" class="fa fa-facebook-square fa-3x social"></i></a>
-      <a href="https://twitter.com"><i id="social-tw" class="fa fa-twitter-square fa-3x social"></i></a>
-      <a href="https://plus.google.com"><i id="social-gp" class="fa fa-google-plus-square fa-3x social"></i></a>
-      <i id="social-em" class="fa fa-envelope-square fa-3x social"></i>
-    </div>
-  </div>
-  <div class="modal-container">
-     Trigger the modal with a button -->
-    <!-- <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Contact Us</button>
-  </div>
-  </footer> -->
+</div>
+
+<footer class="footer">
+  <span><strong>Get in Contact</strong></span>
+  <span><strong>About Us</strong></span>
+  <img class="logo" src="../images/Facebook_Logo.png">
+  <img class="logo" src="../images/Instagram-Logo.png">
+  <img class="logo" src="../images/Twitter_Logo.png">
+</footer>
+
 </body>
 </html>

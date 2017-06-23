@@ -1,20 +1,39 @@
 .footer {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  padding: 1rem;
+  clear: both;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  padding: 35px;
+  margin-top: 20px;
   background-color: $primary-color;
-  text-align: center;
   border-top: 1px solid $secondary-color;
 }
+
 .logo {
   width: 20px;
   height: 20px;
   float: right;
   margin-right: 10px;
 }
+
 span {
   float: left;
   margin-right: 10px;
 }
+
+//Footer social media buttons
+.logo:hover {
+     -webkit-transform: scale(1.1);
+     -moz-transform: scale(1.1);
+     -o-transform: scale(1.1);
+ }
+ .logo {
+     -webkit-transform: scale(0.8);
+     /* Browser Variations: */
+
+     -moz-transform: scale(0.8);
+     -o-transform: scale(0.8);
+     -webkit-transition-duration: 0.5s;
+     -moz-transition-duration: 0.5s;
+     -o-transition-duration: 0.5s;
+ }
